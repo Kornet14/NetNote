@@ -28,9 +28,6 @@ public class mainController implements Initializable {
     fileControl fileControlObj;
     Edit editObj;
 
-    Media media;
-    MediaPlayer md;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         fileControlObj = new fileControl();
@@ -58,9 +55,6 @@ public class mainController implements Initializable {
     }
     public void newFileHandle(){
         fileControlObj.newFile(textArea);
-        media = new Media(new File("music.mp3").toURI().toString());
-        md = new MediaPlayer(media);
-        md.play();
     }
     public void openFileHandle() throws IOException {
         fileControlObj.openFile(textArea);
