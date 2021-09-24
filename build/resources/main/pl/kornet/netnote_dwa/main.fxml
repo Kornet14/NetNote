@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.kornet.netnote_dwa.mainController">
+   <children>
+      <MenuBar layoutX="122.0" layoutY="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Plik">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#newFileHandle" text="Nowy" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFileHandle" text="Otwórz" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveFileHandle" text="Zapisz" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveAsFileHandle" text="Zapisz jako" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edycja">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#copyHandle" text="Kopiuj (Ctrl+C)" />
+                  <MenuItem mnemonicParsing="false" onAction="#pasteHandle" text="Wklej (Ctrl+V)" />
+                  <MenuItem mnemonicParsing="false" onAction="#cutHandle" text="Wytnij (Ctrl+X)" />
+                  <MenuItem mnemonicParsing="false" onAction="#selectAllHandle" text="Zaznacz wszystko (Ctrl+A)" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Confij (Ctrl+Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#redo" text="Przywróć (Ctrl+Y)" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pomoc">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#aboutProgram" text="O programie" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TextArea fx:id="textArea" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#copyHandle" text="Kopiuj" />
+                  <MenuItem mnemonicParsing="false" onAction="#pasteHandle" text="Wklej" />
+                  <MenuItem mnemonicParsing="false" onAction="#cutHandle" text="Wytnij" />
+                  <MenuItem mnemonicParsing="false" onAction="#selectAllHandle" text="Zaznacz wszystko" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Confij" />
+                  <MenuItem mnemonicParsing="false" onAction="#redo" text="Przywróć" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextArea>
+      <ChoiceBox fx:id="cb_czcionka" layoutX="14.0" layoutY="373.0" prefWidth="150.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+      <ChoiceBox fx:id="cb_rozmiar" layoutX="181.0" layoutY="364.0" prefWidth="150.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="170.0" />
+   </children>
+</AnchorPane>
